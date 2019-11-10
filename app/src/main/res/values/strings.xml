@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SpaceX Launch</string>
+    <string name="launches">Launches</string>
+    <string name="chart">Chart</string>
+
+    <string name="mission_name">Mission:&#160;</string>
+    <string name="launch_date">Launch date:&#160;</string>
+    <string name="launch_status">Launch success:&#160;</string>
+    <string name="launch_site">Launch site:&#160;</string>
+    <string name="rocket_name">Rocket name:&#160;</string>
+    <string name="rocket_type">Rocket type:&#160;</string>
+    <string name="customer_name">Customer:&#160;</string>
+    <string name="details">Details:&#160;</string>
+    <string name="article">Article:&#160;%s</string>
+    <string name="wikipedia">Wikipedia:&#160;%s</string>
+    <string name="video">Video:&#160;%s</string>
+
+    <string name="upcoming">Upcoming</string>
+
+</resources>

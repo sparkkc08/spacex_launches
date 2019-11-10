@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.list.LaunchesListFragment">
+
+    <data>
+
+
+        <variable
+            name="viewModel"
+            type="com.spacex.launch.ui.details.LaunchesDetailsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:title="@string/app_name" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="@{viewModel.galleryVisibility}"
+                app:adapter="@{viewModel.galleryAdapter}"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appBar"
+                tools:visibility="gone" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewpager">
+
+                <TableRow
+                    android:background="@color/colorGrayLight"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/mission_name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mission_name"
+                        android:textAppearance="?attr/textAppearanceSearchResultTitle" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@{viewModel.mission}"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        tools:text="@tools:sample/lorem" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/transparent"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/site_name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/launch_site"
+                        android:textAppearance="?attr/textAppearanceSearchResultTitle" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@{viewModel.launchSiteName}"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        tools:text="@tools:sample/lorem" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/colorGrayLight"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/launch_date_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/launch_date"
+                        android:textAppearance="?attr/textAppearanceSearchResultTitle" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@{viewModel.launchDate}"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        tools:text="@tools:sample/lorem" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/transparent"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/launch_status_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/launch_status"
+                        android:textAppearance="?attr/textAppearanceSearchResultTitle" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@{viewModel.launchStatus ?? @string/upcoming}"
+                        android:textAllCaps="true"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        tools:text="@string/upcoming" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/colorGrayLight"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/rocket_name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rocket_name"
+                        android:textAppearance="?attr/textAppearanceSearchResultTitle" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@{viewModel.rocketName}"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        tools:text="@tools:sample/lorem" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/transparent"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/rocket_type_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rocket_type"
+                        android:textAppearance="?attr/textAppearanceSearchResultTitle" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@{viewModel.rocketType}"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        tools:text="@tools:sample/lorem" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/colorGrayLight"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/customer_name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/customer_name"
+                        android:textAppearance="?attr/textAppearanceSearchResultTitle" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@{viewModel.customer}"
+                        android:textAppearance="?attr/textAppearanceListItem"
+                        tools:text="@tools:sample/lorem" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/transparent"
+                    android:paddingStart="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="4dp"
+                    android:visibility="@{viewModel.detailsVisibility}">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/details_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/details"
+                            android:textAppearance="?attr/textAppearanceSearchResultTitle" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.launchDetails}"
+                            android:textAppearance="?attr/textAppearanceListItem"
+                            tools:text="@tools:sample/lorem" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:autoLink="all"
+                            android:text="@{@string/article(viewModel.articleLink)}"
+                            android:textAppearance="?attr/textAppearanceListItem"
+                            app:goneIfEmpty="@{viewModel.articleLink}"
+                            tools:text="@string/article" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:autoLink="all"
+                            android:text="@{@string/wikipedia(viewModel.wikipediaLink)}"
+                            android:textAppearance="?attr/textAppearanceListItem"
+                            app:goneIfEmpty="@{viewModel.wikipediaLink}"
+                            tools:text="@string/wikipedia" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:autoLink="all"
+                            android:text="@{@string/video(viewModel.videoLink)}"
+                            android:textAppearance="?attr/textAppearanceListItem"
+                            app:goneIfEmpty="@{viewModel.videoLink}"
+                            tools:text="@string/video" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

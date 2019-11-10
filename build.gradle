@@ -1,0 +1,53 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        // App dependencies
+        appCompatVersion = '1.1.0'
+        constraintLayoutVersion = '1.1.3'
+        glideVersion = '4.9.0'
+        gradleVersion = '4.0.0-alpha01'
+        kotlinVersion = '1.3.60-eap-25'
+        ktxVersion = '1.1.0'
+        lifecycleVersion = '2.1.0'
+        materialVersion = '1.0.0'
+        pagingVersion = '2.1.0'
+        gsonVersion = '2.8.2'
+        okhttp = '3.10.0'
+        retrofit = '2.6.0'
+        daggerVersion = '2.23.2'
+
+        rxJava = '2.2.4'
+        rxAndroid = '2.1.0'
+        rxJavaAdapter = '2.6.2'
+
+        // Testing dependencies
+        junitVersion = '4.12'
+        junitVersionExt = '1.1.1'
+        espressoVersion = '3.2.0'
+    }
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
