@@ -8,12 +8,13 @@ import com.spacex.launch.data.model.SpaceXLaunch
 import com.spacex.launch.utils.BaseViewModel
 import java.text.DateFormat
 import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 class LaunchesDetailsViewModel @Inject constructor() :
     BaseViewModel() {
     private val launchDateFormat: DateFormat =
-        SimpleDateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT)
+        SimpleDateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT, Locale.US)
 
     val mission = ObservableField<String>()
     val launchDate = ObservableField<String>()

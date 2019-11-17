@@ -2,23 +2,22 @@ package com.spacex.launch.data.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
-import kotlinx.android.parcel.RawValue
 
 @Parcelize
 data class OrbitParams(
-    val apoapsis_km: @RawValue Any,
-    val arg_of_pericenter: @RawValue Any,
-    val eccentricity: @RawValue Any,
-    val epoch: @RawValue Any,
-    val inclination_deg: @RawValue Any,
-    val lifespan_years: @RawValue Any,
-    val longitude: @RawValue Any,
-    val mean_anomaly: @RawValue Any,
-    val mean_motion: @RawValue Any,
-    val periapsis_km: @RawValue Any,
-    val period_min: @RawValue Any,
-    val raan: @RawValue Any,
+    val apoapsis_km: Float?,
+    val arg_of_pericenter: Float?,
+    val eccentricity: Float?,
+    val epoch: String?,
+    val inclination_deg: Float?,
+    val lifespan_years: Float?,
+    val longitude: Float?,
+    val mean_anomaly: Float?,
+    val mean_motion: Float?,
+    val periapsis_km: Float?,
+    val period_min: Float?,
+    val raan: Float?,
     val reference_system: String,
     val regime: String,
-    val semi_major_axis_km: @RawValue Any
+    val semi_major_axis_km: Float?
 ) : Parcelable

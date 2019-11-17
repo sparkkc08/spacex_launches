@@ -25,7 +25,7 @@ class TabsPagerAdapter(private val context: Context, fm: FragmentManager) :
         // Return a PlaceholderFragment (defined as a static inner class below).
         return when (position) {
             0 -> LaunchesListFragment()
-            else -> LaunchesChartFragment.newInstance(position)
+            else -> LaunchesChartFragment()
         }
     }
 

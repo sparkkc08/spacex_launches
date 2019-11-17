@@ -1,0 +1,386 @@
+[
+  {
+    "flight_number": 13,
+    "mission_name": "Thaicom 6",
+    "mission_id": [
+      "9D1B7E0"
+    ],
+    "launch_year": "2014",
+    "launch_date_unix": 1389031560,
+    "launch_date_utc": "2014-01-06T18:06:00.000Z",
+    "launch_date_local": "2014-01-06T14:06:00-04:00",
+    "is_tentative": false,
+    "tentative_max_precision": "hour",
+    "tbd": false,
+    "launch_window": 0,
+    "rocket": {
+      "rocket_id": "falcon9",
+      "rocket_name": "Falcon 9",
+      "rocket_type": "v1.1",
+      "first_stage": {
+        "cores": [
+          {
+            "core_serial": "B1005",
+            "flight": 1,
+            "block": 1,
+            "gridfins": false,
+            "legs": false,
+            "reused": false,
+            "land_success": null,
+            "landing_intent": false,
+            "landing_type": null,
+            "landing_vehicle": null
+          }
+        ]
+      },
+      "second_stage": {
+        "block": 1,
+        "payloads": [
+          {
+            "payload_id": "Thaicom 6",
+            "norad_id": [
+              39500
+            ],
+            "reused": false,
+            "customers": [
+              "Thaicom"
+            ],
+            "nationality": "Thailand",
+            "manufacturer": "Orbital ATK",
+            "payload_type": "Satellite",
+            "payload_mass_kg": 3325,
+            "payload_mass_lbs": 7330,
+            "orbit": "GTO",
+            "orbit_params": {
+              "reference_system": "geocentric",
+              "regime": "geostationary",
+              "longitude": 78.5,
+              "semi_major_axis_km": 42164.301,
+              "eccentricity": 0.0000216,
+              "periapsis_km": 35785.255,
+              "apoapsis_km": 35787.076,
+              "inclination_deg": 0.0448,
+              "period_min": 1436.074,
+              "lifespan_years": 15,
+              "epoch": "2019-02-05T12:29:10.000Z",
+              "mean_motion": 1.00273322,
+              "raan": 130.4799,
+              "arg_of_pericenter": 261.6744,
+              "mean_anomaly": 8.9755
+            }
+          }
+        ]
+      },
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": false,
+        "recovered": false,
+        "ship": null
+      }
+    },
+    "ships": [
+    ],
+    "telemetry": {
+      "flight_club": null
+    },
+    "launch_site": {
+      "site_id": "ccafs_slc_40",
+      "site_name": "CCAFS SLC 40",
+      "site_name_long": "Cape Canaveral Air Force Station Space Launch Complex 40"
+    },
+    "launch_success": true,
+    "links": {
+      "mission_patch": "https://images2.imgbox.com/37/c4/jRAk115c_o.png",
+      "mission_patch_small": "https://images2.imgbox.com/d8/6d/fnqIBEJh_o.png",
+      "reddit_campaign": null,
+      "reddit_launch": "http://www.reddit.com/r/spacex/comments/1ujoc0",
+      "reddit_recovery": null,
+      "reddit_media": null,
+      "presskit": "http://www.spacex.com/sites/spacex/files/spacex_thaicom6_presskit.pdf",
+      "article_link": "http://spacenews.com/38959spacex-delivers-thaicom-6-satellite-to-orbit/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Thaicom_6",
+      "video_link": "https://www.youtube.com/watch?v=AnSNRzMEmCU",
+      "youtube_id": "AnSNRzMEmCU",
+      "flickr_images": [
+        "https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg",
+        "https://farm8.staticflickr.com/7619/16763151866_35a0a4d8e1_o.jpg",
+        "https://farm9.staticflickr.com/8569/16169086873_4d8829832e_o.png"
+      ]
+    },
+    "details": "Second GTO launch for Falcon 9. The USAF evaluated launch data from this flight as part of a separate certification program for SpaceX to qualify to fly U.S. military payloads and found that the Thaicom 6 launch had \"unacceptable fuel reserves at engine cutoff of the stage 2 second burnoff\"",
+    "upcoming": false,
+    "static_fire_date_utc": "2013-12-28T00:00:00.000Z",
+    "static_fire_date_unix": 1388188800,
+    "timeline": {
+      "webcast_liftoff": 2367,
+      "go_for_prop_loading": -2280,
+      "rp1_loading": -2100,
+      "stage1_lox_loading": -2100,
+      "stage2_lox_loading": -960,
+      "engine_chill": -420,
+      "prelaunch_checks": -60,
+      "propellant_pressurization": -60,
+      "go_for_launch": -45,
+      "ignition": -3,
+      "liftoff": 0,
+      "maxq": 60,
+      "meco": 180,
+      "stage_sep": 180,
+      "second_stage_ignition": 1620,
+      "fairing_deploy": 1860,
+      "seco-1": 480,
+      "second_stage_restart": 1620,
+      "seco-2": 1680,
+      "payload_deploy": 1860
+    }
+  },
+  {
+    "flight_number": 26,
+    "mission_name": "Jason 3",
+    "mission_id": [],
+    "launch_year": "2016",
+    "launch_date_unix": 1453045320,
+    "launch_date_utc": "2016-01-17T15:42:00.000Z",
+    "launch_date_local": "2016-01-17T08:42:00-07:00",
+    "is_tentative": false,
+    "tentative_max_precision": "hour",
+    "tbd": false,
+    "launch_window": 0,
+    "rocket": {
+      "rocket_id": "falcon9",
+      "rocket_name": "Falcon 9",
+      "rocket_type": "v1.1",
+      "first_stage": {
+        "cores": [
+          {
+            "core_serial": "B1017",
+            "flight": 1,
+            "block": 1,
+            "gridfins": true,
+            "legs": true,
+            "reused": false,
+            "land_success": false,
+            "landing_intent": true,
+            "landing_type": "ASDS",
+            "landing_vehicle": "JRTI"
+          }
+        ]
+      },
+      "second_stage": {
+        "block": 1,
+        "payloads": [
+          {
+            "payload_id": "Jason-3",
+            "norad_id": [
+              41240
+            ],
+            "reused": false,
+            "customers": [
+              "NASA",
+              "NOAA"
+            ],
+            "nationality": "United States",
+            "manufacturer": "Thales Alenia Space",
+            "payload_type": "Satellite",
+            "payload_mass_kg": 553,
+            "payload_mass_lbs": 1219,
+            "orbit": "PO",
+            "orbit_params": {
+              "reference_system": "geocentric",
+              "regime": "low-earth",
+              "longitude": null,
+              "semi_major_axis_km": 7715.872,
+              "eccentricity": 0.000756,
+              "periapsis_km": 1331.904,
+              "apoapsis_km": 1343.57,
+              "inclination_deg": 66.043,
+              "period_min": 112.418,
+              "lifespan_years": 5,
+              "epoch": "2019-02-05T12:58:20.000Z",
+              "mean_motion": 12.80929446,
+              "raan": 319.344,
+              "arg_of_pericenter": 274.158,
+              "mean_anomaly": 85.8571
+            }
+          }
+        ]
+      },
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": false,
+        "recovered": false,
+        "ship": null
+      }
+    },
+    "ships": [
+      "JRTI-2",
+      "NRCQUEST",
+      "PACIFICFREEDOM"
+    ],
+    "telemetry": {
+      "flight_club": "https://www.flightclub.io/results/?code=JSN3"
+    },
+    "launch_site": {
+      "site_id": "vafb_slc_4e",
+      "site_name": "VAFB SLC 4E",
+      "site_name_long": "Vandenberg Air Force Base Space Launch Complex 4E"
+    },
+    "launch_success": true,
+    "links": {
+      "mission_patch": "https://images2.imgbox.com/71/59/j489OwAI_o.png",
+      "mission_patch_small": "https://images2.imgbox.com/72/f2/uK9vYzvk_o.png",
+      "reddit_campaign": null,
+      "reddit_launch": "https://www.reddit.com/r/spacex/comments/417weg",
+      "reddit_recovery": null,
+      "reddit_media": "https://www.reddit.com/r/spacex/comments/41cvdm",
+      "presskit": "http://www.spacex.com/sites/spacex/files/spacex_jason3_press_kit.pdf",
+      "article_link": "https://spaceflightnow.com/2016/01/18/satellite-launched-to-measure-motions-of-the-oceans/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Jason-3",
+      "video_link": "https://www.youtube.com/watch?v=ivdKRJzl6y0",
+      "youtube_id": "ivdKRJzl6y0",
+      "flickr_images": [
+        "https://farm2.staticflickr.com/1460/24382360351_9b1f2fcabc_o.jpg",
+        "https://farm2.staticflickr.com/1669/24423604506_27d3c4548b_o.jpg",
+        "https://farm2.staticflickr.com/1618/24151425850_1cb6040569_o.jpg",
+        "https://farm2.staticflickr.com/1622/24127012370_07edc62046_o.jpg",
+        "https://farm2.staticflickr.com/1508/24127011190_92ef932c96_o.jpg",
+        "https://farm2.staticflickr.com/1591/23778325594_08231286fc_o.jpg",
+        "https://farm2.staticflickr.com/1542/24038722499_34c10216a3_o.jpg"
+      ]
+    },
+    "details": "First launch of NASA and NOAA joint science mission under the NLS II launch contract (not related to NASA CRS or USAF OSP3 contracts). Last launch of the original Falcon 9 v1.1 launch vehicle. The Jason-3 satellite was successfully deployed to target orbit. SpaceX again attempted a recovery of the first stage booster by landing on an autonomous drone ship; this time located in the Pacific Ocean. The first stage did achieve a soft-landing on the ship, but a lockout on one of the landing legs failed to latch, so that the booster fell over and exploded.",
+    "upcoming": false,
+    "static_fire_date_utc": "2016-01-11T18:42:00.000Z",
+    "static_fire_date_unix": 1452537720,
+    "timeline": {
+      "webcast_liftoff": 1309,
+      "go_for_prop_loading": -2280,
+      "rp1_loading": -2100,
+      "stage1_lox_loading": -2100,
+      "stage2_lox_loading": -960,
+      "engine_chill": -420,
+      "prelaunch_checks": -60,
+      "propellant_pressurization": -60,
+      "go_for_launch": -45,
+      "ignition": -3,
+      "liftoff": 0,
+      "maxq": 78,
+      "meco": 154,
+      "stage_sep": 157,
+      "second_stage_ignition": 3300,
+      "fairing_deploy": 3360,
+      "first_stage_boostback_burn": 265,
+      "first_stage_entry_burn": 420,
+      "seco-1": 540,
+      "second_stage_restart": 3300,
+      "payload_deploy": 3360
+    }
+  },
+  {
+    "flight_number": 89,
+    "mission_name": "CRS-19",
+    "mission_id": [
+      "EE86F74"
+    ],
+    "launch_year": "2019",
+    "launch_date_unix": 1571097600,
+    "launch_date_utc": "2019-10-15T00:00:00.000Z",
+    "launch_date_local": "2019-10-14T20:00:00-04:00",
+    "is_tentative": true,
+    "tentative_max_precision": "day",
+    "tbd": false,
+    "launch_window": null,
+    "rocket": {
+      "rocket_id": "falcon9",
+      "rocket_name": "Falcon 9",
+      "rocket_type": "FT",
+      "first_stage": {
+        "cores": [
+          {
+            "core_serial": null,
+            "flight": null,
+            "block": null,
+            "gridfins": null,
+            "legs": null,
+            "reused": true,
+            "land_success": null,
+            "landing_intent": null,
+            "landing_type": null,
+            "landing_vehicle": null
+          }
+        ]
+      },
+      "second_stage": {
+        "block": null,
+        "payloads": [
+          {
+            "payload_id": "CRS-19",
+            "norad_id": [],
+            "cap_serial": null,
+            "reused": true,
+            "customers": [
+              "NASA (CRS)"
+            ],
+            "nationality": "United States",
+            "manufacturer": "SpaceX",
+            "payload_type": "Dragon 1.1",
+            "payload_mass_kg": null,
+            "payload_mass_lbs": null,
+            "orbit": "ISS",
+            "orbit_params": {
+              "reference_system": "geocentric",
+              "regime": "low-earth",
+              "longitude": null,
+              "semi_major_axis_km": null,
+              "eccentricity": null,
+              "periapsis_km": null,
+              "apoapsis_km": null,
+              "inclination_deg": null,
+              "period_min": null,
+              "lifespan_years": null,
+              "epoch": null,
+              "mean_motion": null,
+              "raan": null,
+              "arg_of_pericenter": null,
+              "mean_anomaly": null
+            },
+            "mass_returned_kg": null,
+            "mass_returned_lbs": null,
+            "flight_time_sec": null,
+            "cargo_manifest": null
+          }
+        ]
+      },
+      "fairings": null
+    },
+    "ships": [],
+    "telemetry": {
+      "flight_club": null
+    },
+    "launch_site": {
+      "site_id": "ksc_lc_39a",
+      "site_name": "KSC LC 39A",
+      "site_name_long": "Kennedy Space Center Historic Launch Complex 39A"
+    },
+    "launch_success": null,
+    "links": {
+      "mission_patch": null,
+      "mission_patch_small": null,
+      "reddit_campaign": null,
+      "reddit_launch": null,
+      "reddit_recovery": null,
+      "reddit_media": null,
+      "presskit": null,
+      "article_link": null,
+      "wikipedia": null,
+      "video_link": null,
+      "youtube_id": null,
+      "flickr_images": []
+    },
+    "details": null,
+    "upcoming": true,
+    "static_fire_date_utc": null,
+    "static_fire_date_unix": null,
+    "timeline": null
+  }
+]

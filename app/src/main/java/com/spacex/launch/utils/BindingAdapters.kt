@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.spacex.launch.R
+import com.spacex.launch.view.ChartView
 import java.text.DateFormat
 import java.util.*
 
@@ -46,5 +47,12 @@ fun setImageFromUrl(view: ImageView, imageUrl: String?) {
             .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
             .transition(DrawableTransitionOptions.withCrossFade())
             .into(view)
+    }
+}
+
+@BindingAdapter("chartData")
+fun setChartData(chartView: ChartView, data: List<Pair<String, Int>>?) {
+    data?.let {
+        chartView.setValues(it)
     }
 }

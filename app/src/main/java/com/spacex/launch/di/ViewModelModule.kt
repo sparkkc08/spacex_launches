@@ -15,7 +15,7 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(ChartViewModel::class)
-    abstract fun bindThemeViewModel(viewModel: ChartViewModel): ViewModel
+    abstract fun bindChartViewModel(viewModel: ChartViewModel): ViewModel
 
     @Binds
     @IntoMap

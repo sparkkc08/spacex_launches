@@ -11,12 +11,12 @@ import com.spacex.launch.R
 import com.spacex.launch.databinding.FragmentLaunchesChartBinding
 import com.spacex.launch.di.Injectable
 import com.spacex.launch.di.injectViewModel
+import kotlinx.android.synthetic.main.fragment_launches_chart.*
 import javax.inject.Inject
 
 
-/**
- * A placeholder fragment containing a simple view.
- */
+private const val SELECTED_INDEX = "selected_index"
+
 class LaunchesChartFragment : Fragment(), Injectable {
 
     @Inject
@@ -27,37 +27,25 @@ class LaunchesChartFragment : Fragment(), Injectable {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        chartViewModel = injectViewModel<ChartViewModel>(viewModelFactory).apply {
-            setIndex(arguments?.getInt(ARG_SECTION_NUMBER) ?: 1)
-        }
+        chartViewModel = injectViewModel(viewModelFactory)
 
         val binding = DataBindingUtil.inflate<FragmentLaunchesChartBinding>(
             inflater, R.layout.fragment_launches_chart, container, false
         )
 
-        binding.executePendingBindings()
-
+        binding.viewModel = chartViewModel
         return binding.root
     }
 
-    companion object {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private const val ARG_SECTION_NUMBER = "section_number"
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(SELECTED_INDEX, chartSuccess.getHighlightedIndex() ?: -1)
+        super.onSaveInstanceState(outState)
+    }
 
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        @JvmStatic
-        fun newInstance(sectionNumber: Int): LaunchesChartFragment {
-            return LaunchesChartFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(ARG_SECTION_NUMBER, sectionNumber)
-                }
-            }
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        savedInstanceState?.getInt(SELECTED_INDEX, -1)?.takeIf { it >= 0 }?.let {
+            chartSuccess.setHighlightedIndex(it)
         }
     }
 }

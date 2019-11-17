@@ -10,8 +10,8 @@ import javax.inject.Singleton
 class LaunchesRepositoryImpl @Inject constructor(private val spaceApi: SpaceXApi) :
     LaunchesRepository {
 
-    override fun getAllLaunches(): Single<List<SpaceXLaunch>> {
-        return spaceApi.getAllLaunches()
+    override fun getPastLaunches(): Single<List<SpaceXLaunch>> {
+        return spaceApi.getPastLaunches()
     }
 
     override fun getAllLaunchesPage(offset: Int, limit: Int): Single<List<SpaceXLaunch>> {
